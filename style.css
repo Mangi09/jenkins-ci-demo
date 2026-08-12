@@ -1,0 +1,182 @@
+/* Values */
+:root {
+  --primary-color: #00895e;
+  --bg-color: #e9e9ea;
+  --text-color: #333;
+  --card-bg: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin: 1rem 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+article img {
+  width: 100%;
+  max-width: 800px; /* restoring somewhat similiar max size but responsive */
+  margin-bottom: 2rem;
+}
+
+section {
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.container {
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product-item {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Changed from fixed height */
+}
+
+.product-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.newsletter {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter h2 {
+  color: var(--bg-color) !important; /* Overriding specific inline style logic if needed, but cleaning up html is better. keeping for now */
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Mobile first stack */
+  gap: 1rem;
+  align-items: center;
+}
+
+input {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  max-width: 400px;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  h1 {
+      font-size: 3rem;
+  }
+  
+  form {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  input {
+    width: auto;
+    flex-grow: 1;
+  }
+}
